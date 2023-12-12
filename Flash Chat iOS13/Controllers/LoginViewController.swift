@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     //MARK: - ViewController Functions
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         hideErrorLabel()
     }
     
@@ -47,7 +48,7 @@ class LoginViewController: UIViewController {
             if let error = error {
                 self.showErrorLabel(withText: error.localizedDescription)
             } else {
-                self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                self.performSegue(withIdentifier: K.loginSegue, sender: self)
             }
             
             

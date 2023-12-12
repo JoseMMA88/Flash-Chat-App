@@ -20,6 +20,7 @@ class RegisterViewController: UIViewController {
     //MARK: - ViewController Functions
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         hideErrorLabel()
     }
     
@@ -49,7 +50,7 @@ class RegisterViewController: UIViewController {
                 self.showErrorLabel(withText: error.localizedDescription)
             } else {
                 //Navigate to ChatViewController
-                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                self.performSegue(withIdentifier: K.registerSegue, sender: self)
             }
         }
     }
